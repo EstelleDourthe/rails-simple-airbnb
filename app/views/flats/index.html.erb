@@ -1,0 +1,8 @@
+<h1>- Airbnb -</h1>
+
+<ul>
+  <% @flats.each do |flat| %>
+    <li><%= link_to flat.name, flat_path(flat.id) %></li>
+    <%= link_to "delete", flat_path(flat), method: :delete %>
+  <% end %>
+</ul>
